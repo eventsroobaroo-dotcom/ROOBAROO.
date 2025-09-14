@@ -2,7 +2,7 @@
 
 const API_CONFIG = {
     // Replace this with your deployed backend URL from Render
-    BASE_URL: 'https://roobaroo-3.onrender.com/api',
+    BASE_URL: 'https://roobaroo-3.onrender.com/',
     // For local development, use: 'http://localhost:5000/api'
     // Request timeout in milliseconds
     TIMEOUT: 10000,
