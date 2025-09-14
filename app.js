@@ -438,55 +438,60 @@ function initializeRegistrationForm() {
     if (!registrationForm) return;
 
     registrationForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        console.log('Registration form submitted');
+    e.preventDefault();
 
-        // Show loading state
-        const submitButton = document.getElementById('registration-submit') || registrationForm.querySelector('button[type="submit"]');
-        const originalButtonText = submitButton.textContent;
-        submitButton.disabled = true;
-        submitButton.textContent = 'Submitting...';
+    // Show loading state
+    const submitButton = document.getElementById('registration-submit') || registrationForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = 'Submitting...';
 
-        try {
-            if (validateRegistrationForm()) {
-                // Store form data
-                registrationData = {
-                    name: document.getElementById('name').value.trim(),
-                    email: document.getElementById('email').value.trim(),
-                    phone: document.getElementById('phone').value.trim(),
-                    status: document.querySelector('input[name="status"]:checked').value
-                };
+    try {
+        if (validateRegistrationForm()) {
+            // Collect form data
+            const registrationData = {
+                name: document.getElementById('name').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                status: document.querySelector('input[name="status"]:checked').value
+            };
 
-                console.log('Registration data:', registrationData);
+            // Make the fetch POST request to backend
+            const response = await fetch(`${API_CONFIG.BASE_URL}/register`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(registrationData),
+                signal: AbortSignal.timeout(API_CONFIG.TIMEOUT)
+            });
 
-                // Submit to backend
-                const result = await submitRegistrationToBackend(registrationData);
+            const result = await response.json();
 
-                // Show success popup
-                successPopup.classList.remove('hidden');
-
-                // Hide popup and navigate to payment after 2 seconds
-                setTimeout(() => {
-                    successPopup.classList.add('hidden');
-                    showPage('payment');
-                }, 2000);
+            if (!response.ok) {
+                throw new Error(result.error || `Request failed with status ${response.status}`);
             }
-        } catch (error) {
-            console.error('Registration failed:', error);
-            
-            // Show error message to user
-            showErrorMessage('general', error.message || 'Registration failed. Please try again.');
-            
-            // Hide error after 5 seconds
+
+            // On success, show success popup or next steps
+            document.getElementById('success-popup').classList.remove('hidden');
+
+            // Optionally, navigate to payment page after delay
             setTimeout(() => {
-                clearErrorMessage({ id: 'general' });
-            }, 5000);
-        } finally {
-            // Reset button state
-            submitButton.disabled = false;
-            submitButton.textContent = originalButtonText;
+                document.getElementById('success-popup').classList.add('hidden');
+                showPage('payment');
+            }, 2000);
         }
-    });
+    } catch (error) {
+        // Show any error messages to user
+        showErrorMessage('general', error.message || 'Registration failed. Please try again.');
+
+        // Hide error after 5 seconds
+        setTimeout(() => clearErrorMessage({ id: 'general' }), 5000);
+    } finally {
+        // Reset submit button state
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+    }
+});
+
 
     // Real-time validation
     const formInputs = registrationForm.querySelectorAll('input[required]');
