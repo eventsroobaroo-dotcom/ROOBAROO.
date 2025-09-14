@@ -5,7 +5,7 @@ const API_CONFIG = {
     BASE_URL: 'https://roobaroo-3.onrender.com/api',
     // For local development, use: 'http://localhost:5000/api'
     // Request timeout in milliseconds
-    TIMEOUT: 10000,
+    TIMEOUT: 50000,
     // Enable detailed logging
     DEBUG: false
 };
