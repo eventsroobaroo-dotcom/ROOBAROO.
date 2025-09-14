@@ -1,24 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ROOBAROO – Your Ultimate Fresher Event Ticket Hub!</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOBAROO - Freshers' Party</title>
+    <link rel="stylesheet" href="style.css">
+   
+    
 </head>
 <body>
-  <h1>Welcome to ROOBAROO – Your Ultimate Fresher Event Ticket Hub!</h1>
-  <p>This is ROOBAROO, the official event management team from B.Tech.<br>
-  We are committed to making your party an engaging and memorable experience. We hope you appreciate our initiative and support us by registering and helping us promote this event.</p>
-  <h2>What We Offer</h2>
-  <ul>
-    <li>Easy-to-use ticket booking and exclusive pass for all major fresher events</li>
-    <li>Verified listings so you only see real, un-copied and trusted events</li>
-    <li>Specified websites for registration & QR code check-ins</li>
-    <li>Special discounts for couples and early-bird deals</li>
-    <li>Curated content on what to expect at each event</li>
-  </ul>
-  <!-- Add div containers for pages, forms, etc. as coded in your JS -->
-  <script src="app.js"></script>
+    <!-- Cursor glow effect -->
+   
+    <!--  NEW enhanced loading screen structure -->
+<div id="loading-screen" class="loading-screen">
+    <!-- Enhanced Loading Particles -->
+    <div class="loading-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
+    <div class="loading-container">
+        <div class="loading-brand">
+            <h1 class="loading-title">ROOBAROO</h1>
+            <p class="loading-subtitle">Your Ultimate Fresher Event Hub</p>
+        </div>
+        
+        <!-- Sexy Modern Loading Bar -->
+        <div class="loading-bar-container">
+            <!-- Neon Glow Effect Background -->
+            <div class="loading-bar-glow"></div>
+            
+            <!-- Main Loading Bar Track -->
+            <div class="loading-bar-track">
+                <div id="loading-bar-fill" class="loading-bar-fill"></div>
+            </div>
+            
+            <!-- Progress Indication Dots -->
+            <div class="progress-dots">
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+            </div>
+        </div>
+        
+        <!-- Enhanced Percentage Display -->
+        <div id="loading-percentage" class="loading-percentage">0%</div>
+    </div>
+</div>
+
+    <!-- Navigation Ribbon -->
+    <nav class="nav-ribbon">
+        <div class="nav-ribbon-container">
+            <a href="#" class="nav-pill" data-page="home">Home</a>
+            <a href="#" class="nav-pill" data-page="about">About</a>
+            <a href="#" class="nav-pill" data-page="contact">Contact Us</a>
+            <button class="nav-pill book-now-pill" data-page="registration">Book Now</button>
+        </div>
+    </nav>
+
+    <!-- Instagram Button -->
+    <div class="instagram-button">
+        <a  href="https://www.instagram.com/roobar.oo/" target="_blank">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Page 1 - Home -->
+    <div id="home" class="page active">
+        <div class="hero-section">
+            <h1 class="main-title">ROOBAROO</h1>
+            <div class="countdown-container">
+                <h2>Event Countdown</h2>
+                <div class="countdown-timer" id="countdown-timer">
+                    <div class="time-unit">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+            <button class="lets-go-btn" data-page="registration">LET'S GO!</button>
+        </div>
+
+        <div class="event-highlights">
+            <h2>Event Highlights</h2>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-icon">🎧</div>
+                    <h3>DJ Vibe</h3>
+                    <p>Experience the ultimate party beats with our professional DJ</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">🕺</div> 
+                    <h3>Dance Performance</h3>
+                    <p>We have organised a special dance performace for all of you</p>
+
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">💕</div>
+                        <h3>Speed Dating</h3>
+                     <p>If you are in hope of someone then we have that someone for you</p>
+                        
+                    
+
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">🍹</div>
+                    <h3>Unlimited Food & Mocktails</h3>
+                    <p>Enjoy delicious snacks and refreshing mocktails throughout the event</p>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-icon">🤫</div>
+                    <h3>Many Surprises are special secret</h3>
+                    <p>Some surprise activities will disclose at the venue.. Hurry Up!!</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">😊</div>
+                    <h3>We are glad to have you all on our venue</h3>
+                    <p>This freshers let's make it the best begining of your college life</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4>What is the dress code of the party?</h4>
+                    <p>The dress code for the party is formal attire.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What is the timing of the event?</h4>
+                    <p>The event will begin at 12:00 PM onwards.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What is the timing of the event?</h4>
+                    <p>There is no restriction on late entry.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What activities will take place during the party?</h4>
+                    <p>The party will feature a ramp walk, live performance by a professional singer, dance performances, and several exciting games that will be announced soon. Stay connected and register at the earliest!</p>
+                </div>
+                <div class="faq-item">
+                    <h4>When will the event conclude?</h4>
+                    <p>The event is expected to conclude by 6:00 PM.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How can we get the passes and reach the venue?</h4>
+                    <p>The venue details will be announced shortly, and the passes will be distributed after the completion of your registration.</p>
+                </div>
+                 <div class="faq-item">
+                    <h4>Do you offer any early bird access?</h4>
+                    <p>We are pleased to inform you that we have a Early bird access only for 25 people..</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2 - About -->
+    <div id="about" class="page">
+        <div class="page-content">
+            
+            <div class="about-container">
+        
+                <h2>Welcome to ROOBAROO – Your Ultimate Fresher Event Ticket Hub!</h2>
+                <h2>This is ROOBAROO, the official event management team from B.Tech. We are committed to making your party an engaging and memorable experience. We sincerely hope you appreciate our initiative and extend your support by registering and helping us promote this event.</h2>
+                
+                <div class="features-section">
+                    <h3>What We Offer</h3>
+                    <ul class="features-list">
+                        <li>Easy-to-use ticket booking and exclusive pass for all major fresher events</li>
+                        <li>Verified listings so you only see real,uncopied and trusted events</li>
+                        <li>Specified websites for registration & QR code check-ins</li>
+                        <li>Special discounts for couples and early-bird deals</li>
+                        <li>Curated content on what to expect at each event</li>
+                    </ul>
+                </div>
+                <div class="decorative-elements">
+                    <div class="party-flag">🎌</div>
+                    <div class="wine-glass">🍷</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3 - Contact -->
+    <div id="contact" class="page">
+        <div class="page-content">
+            
+            <div class="contact-container">
+                <h2>Get in Touch with Us</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email:</strong> events.roobaroo@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong> +91-7011116088 - Sushant Singh Negi(host)
+                    </div>
+                    <div class="contact-item">
+                        <strong>Instagram:</strong> @roobar.oo,
+                         Click the instagram-button and follow us!!
+                    </div>
+                </div>
+                <div class="musical-notes">
+                    <div class="note">♪</div>
+                    <div class="note">♫</div>
+                    <div class="note">♪</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4 - Registration -->
+    <div id="registration" class="page registration-page">
+        <div class="stars-background"></div>
+        <div class="page-content">
+            
+            <form id="registration-form" class="registration-form">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                    <div class="error-message" id="name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email ID</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                    <div class="error-message" id="phone-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Status</label>
+                    <div class="status-options">
+                        <label class="status-option">
+                            <input type="radio" name="status" value="single" required>
+                            <span class="status-button">Single</span>
+                        </label>
+                        <label class="status-option">
+                            <input type="radio" name="status" value="couple" required>
+                            <span class="status-button">Couple</span>
+                        </label>
+                    </div>
+                    <div class="error-message" id="status-error"></div>
+                </div>
+                
+                <button type="submit" class="btn btn--primary registration-submit">Submit</button>
+            </form>
+        </div>
+        <div id="success-popup" class="success-popup hidden">
+            <p>Thank you for your successful registration</p>
+        </div>
+    </div>
+
+    <!-- Page 5 - Payment -->
+    <div id="payment" class="page payment-page">
+        <div class="page-content">
+            <h1>Payment</h1>
+            <div class="payment-container">
+                <div class="payment-section">
+                    <h3>Section 1: Payment QR Code</h3>
+                     <div class="price-display" id="price-display">₹799</div>
+                    <div class="qr-section">
+                        <div class="qr-code-large">
+                                <img src="qr code.png" alt="qr code" style="width:200px; height:200px; border-radius:30px;"> 
+                            
+                                
+                        </div>
+                      
+                        
+                     </div>
+                       
+                    </div>
+                </div>
+                
+                <div class="payment-section">
+                    
+            
+                    
+                    <h3>Section 2: Submit Transaction Proof</h3>
+                    <div class="upload-section">
+                        <label for="transaction-proof" class="upload-label">
+                            Submit the transaction proof here
+                        </label>
+                        <input type="file" id="transaction-proof" accept="image/*" class="file-input">
+                        <button id="complete-payment" class="btn btn--primary">Complete Payment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="payment-success" class="payment-success hidden">
+            <div class="fireworks"></div>
+            <div class="success-message">
+                <p>Thank You for your registration. Your pass is waiting for you. Collect it from 303. Or contact to any 2nd year btech  batch</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
