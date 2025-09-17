@@ -431,7 +431,15 @@ function initializeCountdownTimer() {
 }
 
 // Registration form handling - ENHANCED VERSION WITH BACKEND INTEGRATION
+// Registration form handling - ENHANCED VERSION WITH BACKEND INTEGRATION
 function initializeRegistrationForm() {
+    // Open Google Form in new tab when 'Register Here' button is clicked
+const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdfuBQlYgeuR8Sf5imMtmNniC41uudNutcf09Vz9dir0VmeGg/viewform?usp=dialog';
+
+document.getElementById('register-here-btn').addEventListener('click', function() {
+  window.open(googleFormURL, '_blank', 'noopener,noreferrer');
+});
+
     const registrationForm = document.getElementById('registration-form');
     const successPopup = document.getElementById('success-popup');
     
@@ -439,6 +447,7 @@ function initializeRegistrationForm() {
 
     registrationForm.addEventListener('submit', async function(e) {
     e.preventDefault();
+
 
     // Show loading state
     const submitButton = document.getElementById('registration-submit') || registrationForm.querySelector('button[type="submit"]');
