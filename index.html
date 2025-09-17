@@ -227,11 +227,12 @@
     </div>
 
     <!-- Page 4 - Registration -->
-    <div id="registration" class="page registration-page">
+   <div id="registration" class="page registration-page">
         <div class="stars-background"></div>
         <div class="page-content">
             
             <form id="registration-form" class="registration-form">
+                
                 <div class="form-group">
                     <label for="name" class="form-label">Name</label>
                     <input type="text" id="name" name="name" class="form-control" required>
@@ -266,6 +267,27 @@
                 </div>
                 
                 <button type="submit" class="btn btn--primary registration-submit">Submit</button>
+                <div class="button-container" style="margin-top: 16px;">
+  <div class="button-divider" style="text-align: center; color: var(--color-text-secondary); font-size: small; margin: 16px 0; position: relative;">
+    OR
+    <style>
+      .button-divider::before, .button-divider::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 45%;
+        height: 1px;
+        background: rgba(255, 20, 147, 0.3);
+      }
+      .button-divider::before { left: 0; }
+      .button-divider::after { right: 0; }
+    </style>
+  </div>
+  <button type="button" id="register-here-btn" class="registration-submit" style="cursor: pointer; width: 100%;">
+    Register Here
+  </button>
+</div>
+
             </form>
         </div>
         <div id="success-popup" class="success-popup hidden">
