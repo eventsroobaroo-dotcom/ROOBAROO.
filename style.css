@@ -1568,10 +1568,7 @@ body {
 }
 
 .Location svg {
-   background: #fff;       /* white background */
-  border-radius: 50%;     /* circular shape */
-  padding: 5px;           /* space inside */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* soft shadow for pop effect */
+
   width: 28px;
   height: 28px;
 }
