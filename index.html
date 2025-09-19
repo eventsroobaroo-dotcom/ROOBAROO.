@@ -1,56 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROOBAROO - Freshers' Party</title>
+    <title>ROOBAROO - Freshers Party</title>
     <link rel="stylesheet" href="style.css">
-   
-    
 </head>
+
 <body>
     <!-- Cursor glow effect -->
-   
-    <!--  NEW enhanced loading screen structure -->
-<div id="loading-screen" class="loading-screen">
-    <!-- Enhanced Loading Particles -->
-    <div class="loading-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
-    
-    <div class="loading-container">
-        <div class="loading-brand">
-            <h1 class="loading-title">ROOBAROO</h1>
-            <p class="loading-subtitle">Your Ultimate Fresher Event Hub</p>
+    <div id="cursor-glow"></div>
+
+    <!-- NEW enhanced loading screen structure -->
+    <div id="loading-screen" class="loading-screen">
+        <!-- Enhanced Loading Particles -->
+        <div class="loading-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
         </div>
-        
-        <!-- Sexy Modern Loading Bar -->
-        <div class="loading-bar-container">
-            <!-- Neon Glow Effect Background -->
-            <div class="loading-bar-glow"></div>
-            
-            <!-- Main Loading Bar Track -->
-            <div class="loading-bar-track">
-                <div id="loading-bar-fill" class="loading-bar-fill"></div>
+
+        <div class="loading-container">
+            <div class="loading-brand">
+                <h1 class="loading-title">ROOBAROO</h1>
+                <p class="loading-subtitle">Your Ultimate Fresher Event Hub</p>
             </div>
-            
-            <!-- Progress Indication Dots -->
-            <div class="progress-dots">
-                <div class="progress-dot"></div>
-                <div class="progress-dot"></div>
-                <div class="progress-dot"></div>
-                <div class="progress-dot"></div>
+
+            <!-- Sexy Modern Loading Bar -->
+            <div class="loading-bar-container">
+                <!-- Neon Glow Effect Background -->
+                <div class="loading-bar-glow"></div>
+                <!-- Main Loading Bar Track -->
+                <div class="loading-bar-track">
+                    <div id="loading-bar-fill" class="loading-bar-fill"></div>
+                </div>
+                <!-- Progress Indication Dots -->
+                <div class="progress-dots">
+                    <div class="progress-dot"></div>
+                    <div class="progress-dot"></div>
+                    <div class="progress-dot"></div>
+                    <div class="progress-dot"></div>
+                </div>
             </div>
+
+            <!-- Enhanced Percentage Display -->
+            <div id="loading-percentage" class="loading-percentage">0%</div>
         </div>
-        
-        <!-- Enhanced Percentage Display -->
-        <div id="loading-percentage" class="loading-percentage">0%</div>
     </div>
-</div>
 
     <!-- Navigation Ribbon -->
     <nav class="nav-ribbon">
@@ -64,19 +63,29 @@
 
     <!-- Instagram Button -->
     <div class="instagram-button">
-        <a  href="https://www.instagram.com/roobar.oo/" target="_blank">
+        <a href="https://www.instagram.com/roobar.oo" target="_blank">
             <svg viewBox="0 0 24 24" width="24" height="24">
-                <path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                <path fill="currentColor"
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
             </svg>
         </a>
     </div>
 
-
-
+    <!-- Location Button -->
+    <div class="Location">
+        <a href="https://maps.app.goo.gl/g1PfpCE9u59rnqFX9" target="_blank">
+<svg class="map-icon" viewBox="0 0 24 24" width="28" height="28" role="img" aria-label="Open in Google Maps" xmlns="http://www.w3.org/2000/svg">
+  <title>Map pin</title>
+  <path fill="currentColor" d="M12 2C8.686 2 6 4.686 6 8c0 4.418 6 12 6 12s6-7.582 6-12c0-3.314-2.686-6-6-6zm0 8.25a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5z"/>
+</svg>
+</a>
+    </div>
+ 
     <!-- Page 1 - Home -->
     <div id="home" class="page active">
         <div class="hero-section">
             <h1 class="main-title">ROOBAROO</h1>
+
             <div class="countdown-container">
                 <h2>Event Countdown</h2>
                 <div class="countdown-timer" id="countdown-timer">
@@ -94,10 +103,11 @@
                     </div>
                 </div>
             </div>
+
             <button class="lets-go-btn" data-page="registration">LET'S GO!</button>
         </div>
 
-        <div class="event-highlights">
+     <div class="event-highlights">
             <h2>Event Highlights</h2>
             <div class="activities-grid">
                 <div class="activity-card">
@@ -176,12 +186,10 @@
     <!-- Page 2 - About -->
     <div id="about" class="page">
         <div class="page-content">
-            
             <div class="about-container">
-        
                 <h2>Welcome to ROOBAROO – Your Ultimate Fresher Event Ticket Hub!</h2>
-                <h2>ROOBAROO – B.Tech’s official event squad, here to make your party unforgettable! Register now & be part of the vibe.</h2>
-                
+                <h2>ROOBAROO – B.Tech's official event squad, here to make your party unforgettable! Register now & be part of the vibe.</h2>
+
                 <div class="features-section">
                     <h3>What We Offer</h3>
                     <ul class="features-list">
@@ -192,10 +200,10 @@
                         <li>Curated content on what to expect at each event</li>
                     </ul>
                 </div>
-                <div class="decorative-elements">
-                    <div class="party-flag">🍾  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  🍻</div>
-                    <div class="wine-glass">🍷</div>
 
+                <div class="decorative-elements">
+                    <div class="party-flag">🎊&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🍾</div>
+                    <div class="wine-glass">🍺&nbsp;&nbsp;&nbsp;🍷</div>
                 </div>
             </div>
         </div>
@@ -204,9 +212,9 @@
     <!-- Page 3 - Contact -->
     <div id="contact" class="page">
         <div class="page-content">
-            
             <div class="contact-container">
                 <h2>Get in Touch with Us</h2>
+
                 <div class="contact-info">
                     <div class="contact-item">
                         <strong>Email:</strong> events.roobaroo@gmail.com
@@ -214,89 +222,39 @@
                     <div class="contact-item">
                         <strong>Phone:</strong> +91-7011116088 - Sushant Singh Negi(host)
                     </div>
-                  
-                    
                     <div class="contact-item">
-                        <strong>Instagram:</strong> @roobar.oo,
-                         Click the instagram-button and follow us!!
+                        <strong>Instagram:</strong> @roobar.oo, Click the instagram-button and follow us!!
                     </div>
-                
+                </div>
+
                 <div class="musical-notes">
                     <div class="note">♪</div>
                     <div class="note">♫</div>
-                    <div class="note">♪</div>
+                    <div class="note">♩</div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Page 4 - Registration -->
-   <div id="registration" class="page registration-page">
+    <div id="registration" class="page registration-page">
         <div class="stars-background"></div>
         <div class="page-content">
-            
             <form id="registration-form" class="registration-form">
-                
-                <div class="form-group">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" id="name" name="name" class="form-control" required>
-                    <div class="error-message" id="name-error"></div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email" class="form-label">Email ID</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
-                    <div class="error-message" id="email-error"></div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone" class="form-label">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" class="form-control" required>
-                    <div class="error-message" id="phone-error"></div>
-                </div>
-                
-                <div class="form-group">
-                    <label class="form-label">Status</label>
-                    <div class="status-options">
-                        <label class="status-option">
-                            <input type="radio" name="status" value="single" required>
-                            <span class="status-button">Single</span>
-                        </label>
-                        <label class="status-option">
-                            <input type="radio" name="status" value="couple" required>
-                            <span class="status-button">Couple</span>
-                        </label>
+                <div class="button-divider" style="text-align: center; color: var(--color-text-secondary); font-size: small; margin: 16px 0; position: relative;">
+                        Your Passes are waiting for you!! HURRY UP!!
+                        
                     </div>
-                    <div class="error-message" id="status-error"></div>
+                    <button type="button" id="register-here-btn" class="registration-submit" style="cursor: pointer; width: 100%;">
+                        Register Here
+                    </button>
                 </div>
-                
-                <button type="submit" class="btn btn--primary registration-submit">Submit</button>
-                <div class="button-container" style="margin-top: 16px;">
-  <div class="button-divider" style="text-align: center; color: var(--color-text-secondary); font-size: small; margin: 16px 0; position: relative;">
-    OR
-    <style>
-      .button-divider::before, .button-divider::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        width: 45%;
-        height: 1px;
-        background: rgba(255, 20, 147, 0.3);
-      }
-      .button-divider::before { left: 0; }
-      .button-divider::after { right: 0; }
-    </style>
-  </div>
-  <button type="button" id="register-here-btn" class="registration-submit" style="cursor: pointer; width: 100%;">
-    Register Here
-  </button>
-</div>
-
             </form>
         </div>
-        <div id="success-popup" class="success-popup hidden">
-            <p>Thank you for your successful registration</p>
-        </div>
+    </div>
+
+    <div id="success-popup" class="success-popup hidden">
+        <p>Thank you for your successful registration</p>
     </div>
 
     <!-- Page 5 - Payment -->
@@ -306,43 +264,34 @@
             <div class="payment-container">
                 <div class="payment-section">
                     <h3>Section 1: Payment QR Code</h3>
-                     <div class="price-display" id="price-display">₹799</div>
+                    <div class="price-display" id="price-display">₹799</div>
                     <div class="qr-section">
                         <div class="qr-code-large">
-                                <img src="qr code.png" alt="qr code" style="width:200px; height:200px; border-radius:30px;"> 
-                            
-                                
+                            <img src="qr code.png" alt="qr code" style="width:200px; height:200px; border-radius:30px;">
                         </div>
-                      
-                        
-                     </div>
-                       
                     </div>
                 </div>
-                
+
                 <div class="payment-section">
-                    
-            
-                    
                     <h3>Section 2: Submit Transaction Proof</h3>
                     <div class="upload-section">
-                        <label for="transaction-proof" class="upload-label">
-                            Submit the transaction proof here
-                        </label>
+                        <label for="transaction-proof" class="upload-label">Submit the transaction proof here</label>
                         <input type="file" id="transaction-proof" accept="image/*" class="file-input">
                         <button id="complete-payment" class="btn btn--primary">Complete Payment</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="payment-success" class="payment-success hidden">
-            <div class="fireworks"></div>
-            <div class="success-message">
-                <p>Thank You for your registration. Your pass is waiting for you. Collect it from 303. Or contact to any 2nd year btech  batch</p>
-            </div>
+    </div>
+
+    <div id="payment-success" class="payment-success hidden">
+        <div class="fireworks"></div>
+        <div class="success-message">
+            <p>Thank You for your registration. Your pass is waiting for you. Collect it from 303. Or contact to any 2nd year btech batch</p>
         </div>
     </div>
 
     <script src="app.js"></script>
 </body>
+
 </html>
