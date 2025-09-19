@@ -1531,6 +1531,57 @@ body {
   }
 }
 
+/* Loaction Button floating design */
+.Location {
+  position: fixed;
+  bottom: var(--space-32);
+  left: var(--space-32);
+  z-index: 1000;
+  animation: float 3s ease-in-out infinite;
+}
+
+.Location a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  border-radius: var(--radius-full);
+  color: var(--color-white);
+  text-decoration: none;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.Location a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 var(--space-12) 40px rgba(225, 48, 108, 0.4);
+}
+
+.Location svg {
+  width: 28px;
+  height: 28px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 /* Pages */
 .page {
   min-height: 100vh;
