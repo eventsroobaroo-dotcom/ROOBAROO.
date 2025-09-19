@@ -73,28 +73,23 @@
 
 
      <!-- Location Button -->
-    <div class="Location">
-        <a  href="https://maps.app.goo.gl/s7aqRPMsPLytPrNZ7" target="_blank">
-            <!-- Google Maps Multicolor Pin -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="40" height="40" role="img" aria-label="Google Maps">
-  <title>Google Maps</title>
-  <!-- Pin body (grey outline) -->
-  <path fill="#757575" d="M24 44s14-17.11 14-26c0-7.73-6.27-14-14-14s-14 6.27-14 14c0 8.89 14 26 14 26z"/>
-  <!-- Blue part -->
-  <path fill="#1E88E5" d="M24 20v24s14-17.11 14-26c0-7.73-6.27-14-14-14v16z"/>
-  <!-- Green part -->
-  <path fill="#34A853" d="M24 20V4c-7.73 0-14 6.27-14 14 0 8.89 14 26 14 26V20z"/>
-  <!-- Yellow circle background -->
-  <circle cx="24" cy="18" r="6" fill="#FBBC05"/>
-  <!-- White center dot -->
-  <circle cx="24" cy="18" r="3" fill="#fff"/>
-  <!-- Red top circle outline -->
-  <circle cx="24" cy="18" r="6" fill="none" stroke="#EA4335" stroke-width="2"/>
+  <!-- Themed Location Pin -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+  <defs>
+    <!-- Gradient matching your site -->
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff00cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9900;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Pin shape -->
+  <path d="M12 2C8 2 5 5.5 5 9.5c0 5.25 7 12.5 7 12.5s7-7.25 7-12.5C19 5.5 16 2 12 2z" 
+        fill="url(#grad1)" />
+  
+  <!-- White center circle -->
+  <circle cx="12" cy="9.5" r="3" fill="#fff"/>
 </svg>
-
-        </a>
-    </div>
-
 
     <!-- Page 1 - Home -->
     <div id="home" class="page active">
