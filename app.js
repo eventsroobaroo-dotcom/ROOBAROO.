@@ -401,7 +401,7 @@ function showPage(pageName) {
 
 // Countdown timer
 function initializeCountdownTimer() {
-    const targetDate = new Date('2025-09-29T00:00:00').getTime();
+    const targetDate = new Date('2025-09-29T12:00:00').getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
